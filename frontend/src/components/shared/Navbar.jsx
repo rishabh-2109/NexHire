@@ -54,17 +54,17 @@ navigate("/");
                             <Popover>
                                 <PopoverTrigger asChild>
                                     <Avatar className='cursor-pointer'>
-                                        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                                        <AvatarImage src={user?.profile?.profilePhoto} alt="@shadcn" />
                                     </Avatar>
                                 </PopoverTrigger>
                                 <PopoverContent className='w-80'>
                                     <div className='flex gap-4 space-y-2'>
                                         <Avatar className='cursor-pointer'>
-                                            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                                            <AvatarImage src={user?.profile?.profilePhoto} alt="@shadcn" />
                                         </Avatar>
                                         <div>
-                                            <h4 className='font-medium'>Rishabh Sharma</h4>
-                                            <p className='text-sm text-muted-foreground'>Lorem ipsum dolor sit amet</p>
+                                            <h4 className='font-medium'>{user?.fullname}</h4>
+                                            <p className='text-sm text-muted-foreground'>{user?.profile?.bio}</p>
                                         </div>
 
                                     </div>
