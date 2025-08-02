@@ -22,7 +22,7 @@ const cloudResponse=await cloudinary.uploader.upload(fileUri.content);
         if (user) {
             return res.status(400).json({
                 message: "User already exists with this email.",
-                success: false
+                success: false,
             });
         }
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -60,8 +60,8 @@ export const login = async (req, res) => {
             return res.status(400).json({
                 message: "Incorrect email or password.",
                 success: false,
-            })
-        }
+            });
+        };
         const isPasswordMatch = await bcrypt.compare(password, user.password);
         if (!isPasswordMatch) {
             return res.status(400).json({
@@ -70,7 +70,7 @@ export const login = async (req, res) => {
             })
         };
         // check role is correct or not
-        if (role != user.role) {
+        if (role !== user.role) {
             return res.status(400).json({
                 message: "Account does not exists with current role.",
                 success: false
