@@ -24,7 +24,7 @@ return Math.floor(timeDifference/(1000*24*60*60))
             <div className='flex items-center gap-2 my-2'>
                 <Button>
                     <Avatar>
-                        <AvatarImage src="https://img.freepik.com/premium-vector/beautiful-unique-logo-design-ecommerce-retail-company_1287271-14561.jpg" />
+                        <AvatarImage src={job?.company?.logo} />
                     </Avatar>
                 </Button>
                 <div>
