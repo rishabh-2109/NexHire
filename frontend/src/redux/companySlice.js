@@ -18,7 +18,7 @@ const companySlice=createSlice({
             state.searchCompanyByText=action.payload;
         }
     }
-})
+});
 
 export const {setSingleCompany,setCompanies,setSearchCompanyByText}=companySlice.actions;
 export default companySlice.reducer;

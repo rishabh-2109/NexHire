@@ -28,9 +28,12 @@ const Footer = () => {
         <div>
           <h2 className="text-base font-semibold text-white mb-2">Connect with Us</h2>
           <div className="flex space-x-3 mt-1">
-            <a href="#" aria-label="Twitter" className="hover:text-white"><Twitter size={18} /></a>
-            <a href="#" aria-label="LinkedIn" className="hover:text-white"><Linkedin size={18} /></a>
-            <a href="#" aria-label="GitHub" className="hover:text-white"><Github size={18} /></a>
+            <a href="https://x.com/_Rishabh_21?t=3qm_ltmRcoCFmlr4oVaCww&s=09"  target="_blank"
+  rel="noopener noreferrer" aria-label="Twitter" className="hover:text-white"><Twitter size={18} /></a>
+            <a href="https://www.linkedin.com/in/sharma-rishabh2109"  target="_blank"
+  rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-white"><Linkedin size={18} /></a>
+            <a href="https://github.com/rishabh-2109"   target="_blank"
+  rel="noopener noreferrer" aria-label="GitHub" className="hover:text-white"><Github size={18} /></a>
           </div>
         </div>
       </div>

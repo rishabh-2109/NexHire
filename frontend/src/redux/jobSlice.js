@@ -24,7 +24,7 @@ const jobSlice=createSlice({
 state.searchJobByText=action.payload;
         },
         setAllAppliedJobs:(state,action)=>{
-            state.allAdminJobs=action.payload;
+            state.allAppliedJobs=action.payload;
         },
         setSearchedQuery:(state,action)=>{
           state.searchedQuery=action.payload;  

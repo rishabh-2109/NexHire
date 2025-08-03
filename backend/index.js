@@ -1,15 +1,14 @@
-import dotenv from "dotenv";
-dotenv.config(); // ✅ Must be called BEFORE anything uses env vars
-
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import detenv from "dotenv";
 import userRoute from "./routes/user.route.js";
 import connectDB from "./utils/db.js";
 import companyRoute from "./routes/company.route.js";
 import jobRoute from "./routes/job.route.js";
 import applicationRoute from "./routes/application.route.js";
-import './utils/cloudinary.js'; // ✅ Now this runs AFTER env vars are loaded
+
+detenv.config({});
 
 const app = express();
 
@@ -20,12 +19,14 @@ app.use(cookieParser());
 const corsOptions = {
   origin: 'http://localhost:5173',
   credentials: true
-};
+}
+
 app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
 
-// Routes
+
+// api's
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);

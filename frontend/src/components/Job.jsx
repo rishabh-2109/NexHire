@@ -12,7 +12,7 @@ const Job = ({job}) => {
 const createdAt=new Date(mongodbTime);
 const currentTime=new Date();
 const timeDifference=currentTime - createdAt;
-return Math.floor(timeDifference/(1000*24*60*60))
+return Math.floor(timeDifference/(1000*24*60*60));
     }
     return (
         <div className='p-5 rounded-md shadow-xl bg-white border border-gray-100'>
@@ -39,7 +39,7 @@ return Math.floor(timeDifference/(1000*24*60*60))
             </div>
             <div className='flex items-center gap-2 mt-4'>
                 <Badge className='text-blue-700 font-bold' variant="ghost">
-                   {job?.position}
+                   {job?.position} Positions
                 </Badge>
                 <Badge className='text-[#F83002] font-bold' variant="ghost">
                    {job?.jobType}
@@ -49,7 +49,7 @@ return Math.floor(timeDifference/(1000*24*60*60))
                 </Badge>
             </div>
             <div className='flex items-center gap-4 mt-4'>
-                <Button onClick={()=>navigate(`/description/${job?._id}`)} variant="outline" className='cursor-pointer'>Details</Button>
+                <Button onClick={()=>navigate(`/description/${job?._id}`)} variant="outline">Details</Button>
                 <Button className='bg-[#7209b7]'>Save for Later</Button>
             </div>
         </div>
